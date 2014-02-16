@@ -1,0 +1,17 @@
+﻿<NUnitProject>
+  <Settings activeconfig="Debug" />
+
+  <Config name="Debug" binpathtype="Auto">
+    <assembly path="..\..\source\cron\bin\Debug\Jarvis.Cron.dll" />
+    <assembly path="..\..\source\elements\bin\Debug\Jarvis.Elements.dll" />
+    <assembly path="..\..\source\utilities\bin\Debug\Jarvis.Utilities.dll" />
+    <assembly path="..\..\source\x10lib\bin\Debug\Jarvis.X10.dll" />
+  </Config>
+
+  <Config name="Release" binpathtype="Auto">
+    <assembly path="..\..\source\cron\bin\Release\Jarvis.Cron.dll" />
+    <assembly path="..\..\source\elements\bin\Release\Jarvis.Elements.dll" />
+    <assembly path="..\..\source\utilities\bin\Release\Jarvis.Utilities.dll" />
+    <assembly path="..\..\source\x10lib\bin\Release\Jarvis.X10.dll" />
+  </Config>
+</NUnitProject>

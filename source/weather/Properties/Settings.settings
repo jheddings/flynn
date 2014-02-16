@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Flynn.Weather.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="YahooApplicationID" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">rvo7PMHV34GF_b1JSWiELfYRRcksR5IstxSgYKM4parOUUNDj2IB.6vDunrSQQ--</Value>
+    </Setting>
+    <Setting Name="GeoNames_Username" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">demo</Value>
+    </Setting>
+    <Setting Name="Weather_CacheEnabled" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="GeoData_CacheEnabled" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="AstroData_CacheEnabled" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,44 @@
+#!/bin/sh
+#
+# jarvis: Jarvis Automation Service
+#
+# chkconfig: 345 95 5
+# processname: Jarvis.exe
+# description: Jarvis Automation Service
+# pidfile: /var/run/jarvis/jarvis.pid
+
+NAME="jarvis"
+DESC="Jarvis Automation Service"
+
+PIDFILE="/var/run/jarvis.pid"
+LIBDIR="/usr/local/lib/jarvis"
+
+DAEMON="$LIBDIR/Jarvis.Daemon.exe"
+ARGS="--daemon"
+
+[ -f $DAEMON ] || exit 1
+
+case "$1" in
+  start)
+    /bin/echo -n "Starting $DESC: "
+    mono-service -l:$PIDFILE -m:$NAME -d:$LIBDIR $DAEMON $ARGS
+    /bin/echo "$NAME"
+    ;;
+
+  stop)
+    /bin/echo -n "Stopping $DESC: "
+    if [ -f $PIDFILE ] ; then
+      kill `cat $PIDFILE`
+    fi
+    /bin/echo "$NAME"
+    ;;
+
+  restart) $0 stop && $0 start ;;
+
+  *)
+    /bin/echo "Usage: $0 {start|stop|restart}" >&2
+    exit 1
+    ;;
+esac
+
+exit 0

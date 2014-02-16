@@ -1,0 +1,23 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Flynn.Daemon.Properties" GeneratedClassName="Settings">
+  <Profiles />
+
+  <Settings>
+    <Setting Name="ConfigPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">flynn.conf</Value>
+    </Setting>
+    
+    <Setting Name="RunAsService" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+
+    <Setting Name="ShallowMaintInterval_Min" Type="System.UInt32" Scope="Application">
+      <Value Profile="(Default)">1440</Value>
+    </Setting>
+    
+    <Setting Name="DeepMaintInterval_Min" Type="System.UInt32" Scope="Application">
+      <Value Profile="(Default)">43200</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

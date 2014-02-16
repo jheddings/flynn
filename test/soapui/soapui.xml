@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project name="jarvis" resourceRoot="" soapui-version="3.6.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="TestSuite" value="Diagnostics Test Suite"/>
+  <con:entry key="Report to Generate" value=""/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="soapui-setings.xml Password" value=""/>
+  <con:entry key="TestRunner Path" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="Save Project" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Export JUnit Results" value="false"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="Export All" value="false"/>
+  <con:entry key="Report Format(s)" value=""/>
+  <con:entry key="TestCase" value="Simple Ping Test"/>
+  <con:entry key="Print Report" value="false"/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="Root Folder" value=""/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="Endpoint" value=""/>
+</xml-fragment>]]></con:setting></con:settings><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="BasicHttpBinding_ITaskServiceV1" type="wsdl" bindingName="{http://tempuri.org/}BasicHttpBinding_ITaskServiceV1" soapVersion="1_1" anonymous="optional" definition="http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Tasks?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Tasks?wsdl"><con:part><con:url>http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Tasks?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="TaskService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://edwin.sf.net/services/jarvis" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+  <wsdl:import namespace="http://edwin.sf.net/services/jarvis" location="http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Tasks?wsdl=wsdl0"/>
+  <wsdl:types/>
+  <wsdl:binding name="BasicHttpBinding_ITaskServiceV1" type="i0:ITaskServiceV1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetTaskNames">
+      <soap:operation soapAction="http://edwin.sf.net/services/jarvis/ITaskServiceV1/GetTaskNames" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskData">
+      <soap:operation soapAction="http://edwin.sf.net/services/jarvis/ITaskServiceV1/GetTaskData" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ArgumentExceptionFault">
+        <soap:fault name="ArgumentExceptionFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="EnableTask">
+      <soap:operation soapAction="http://edwin.sf.net/services/jarvis/ITaskServiceV1/EnableTask" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ArgumentExceptionFault">
+        <soap:fault name="ArgumentExceptionFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DisableTask">
+      <soap:operation soapAction="http://edwin.sf.net/services/jarvis/ITaskServiceV1/DisableTask" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ArgumentExceptionFault">
+        <soap:fault name="ArgumentExceptionFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TaskService">
+    <wsdl:port name="BasicHttpBinding_ITaskServiceV1" binding="tns:BasicHttpBinding_ITaskServiceV1">
+      <soap:address location="http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Tasks/V1"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Tasks?wsdl=wsdl0</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://edwin.sf.net/services/jarvis" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://edwin.sf.net/services/jarvis" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://edwin.sf.net/services/jarvis/Imports">
+      <xsd:import schemaLocation="http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Tasks?xsd=xsd0" namespace="http://edwin.sf.net/services/jarvis"/>
+      <xsd:import schemaLocation="http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Tasks?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      <xsd:import schemaLocation="http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Tasks?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+      <xsd:import schemaLocation="http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Tasks?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITaskServiceV1_GetTaskNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTaskNames"/>
+  </wsdl:message>
+  <wsdl:message name="ITaskServiceV1_GetTaskNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTaskNamesResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ITaskServiceV1_GetTaskData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTaskData"/>
+  </wsdl:message>
+  <wsdl:message name="ITaskServiceV1_GetTaskData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTaskDataResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ITaskServiceV1_GetTaskData_ArgumentExceptionFault_FaultMessage">
+    <wsdl:part name="detail" element="q1:ArgumentException" xmlns:q1="http://schemas.datacontract.org/2004/07/System"/>
+  </wsdl:message>
+  <wsdl:message name="ITaskServiceV1_EnableTask_InputMessage">
+    <wsdl:part name="parameters" element="tns:EnableTask"/>
+  </wsdl:message>
+  <wsdl:message name="ITaskServiceV1_EnableTask_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EnableTaskResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ITaskServiceV1_EnableTask_ArgumentExceptionFault_FaultMessage">
+    <wsdl:part name="detail" element="q2:ArgumentException" xmlns:q2="http://schemas.datacontract.org/2004/07/System"/>
+  </wsdl:message>
+  <wsdl:message name="ITaskServiceV1_DisableTask_InputMessage">
+    <wsdl:part name="parameters" element="tns:DisableTask"/>
+  </wsdl:message>
+  <wsdl:message name="ITaskServiceV1_DisableTask_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisableTaskResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ITaskServiceV1_DisableTask_ArgumentExceptionFault_FaultMessage">
+    <wsdl:part name="detail" element="q3:ArgumentException" xmlns:q3="http://schemas.datacontract.org/2004/07/System"/>
+  </wsdl:message>
+  <wsdl:portType name="ITaskServiceV1">
+    <wsdl:operation name="GetTaskNames">
+      <wsdl:input wsaw:Action="http://edwin.sf.net/services/jarvis/ITaskServiceV1/GetTaskNames" message="tns:ITaskServiceV1_GetTaskNames_InputMessage"/>
+      <wsdl:output wsaw:Action="http://edwin.sf.net/services/jarvis/ITaskServiceV1/GetTaskNamesResponse" message="tns:ITaskServiceV1_GetTaskNames_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskData">
+      <wsdl:input wsaw:Action="http://edwin.sf.net/services/jarvis/ITaskServiceV1/GetTaskData" message="tns:ITaskServiceV1_GetTaskData_InputMessage"/>
+      <wsdl:output wsaw:Action="http://edwin.sf.net/services/jarvis/ITaskServiceV1/GetTaskDataResponse" message="tns:ITaskServiceV1_GetTaskData_OutputMessage"/>
+      <wsdl:fault wsaw:Action="http://edwin.sf.net/services/jarvis/ITaskServiceV1/GetTaskDataArgumentExceptionFault" name="ArgumentExceptionFault" message="tns:ITaskServiceV1_GetTaskData_ArgumentExceptionFault_FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="EnableTask">
+      <wsdl:input wsaw:Action="http://edwin.sf.net/services/jarvis/ITaskServiceV1/EnableTask" message="tns:ITaskServiceV1_EnableTask_InputMessage"/>
+      <wsdl:output wsaw:Action="http://edwin.sf.net/services/jarvis/ITaskServiceV1/EnableTaskResponse" message="tns:ITaskServiceV1_EnableTask_OutputMessage"/>
+      <wsdl:fault wsaw:Action="http://edwin.sf.net/services/jarvis/ITaskServiceV1/EnableTaskArgumentExceptionFault" name="ArgumentExceptionFault" message="tns:ITaskServiceV1_EnableTask_ArgumentExceptionFault_FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="DisableTask">
+      <wsdl:input wsaw:Action="http://edwin.sf.net/services/jarvis/ITaskServiceV1/DisableTask" message="tns:ITaskServiceV1_DisableTask_InputMessage"/>
+      <wsdl:output wsaw:Action="http://edwin.sf.net/services/jarvis/ITaskServiceV1/DisableTaskResponse" message="tns:ITaskServiceV1_DisableTask_OutputMessage"/>
+      <wsdl:fault wsaw:Action="http://edwin.sf.net/services/jarvis/ITaskServiceV1/DisableTaskArgumentExceptionFault" name="ArgumentExceptionFault" message="tns:ITaskServiceV1_DisableTask_ArgumentExceptionFault_FaultMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Tasks?xsd=xsd0</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://edwin.sf.net/services/jarvis" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://edwin.sf.net/services/jarvis">
+  <xs:import schemaLocation="http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Tasks?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+  <xs:element name="GetTaskNames">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTaskNamesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTaskNamesResult" nillable="true" type="q1:ArrayOfstring" xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTaskData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTaskDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTaskDataResult" nillable="true" type="tns:TaskDataV1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="TaskDataV1">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TaskDataV1" nillable="true" type="tns:TaskDataV1"/>
+  <xs:element name="EnableTask">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnableTaskResponse">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DisableTask">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DisableTaskResponse">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Tasks?xsd=xsd2</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+  <xs:complexType name="ArrayOfstring">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfstring" nillable="true" type="tns:ArrayOfstring"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Tasks?xsd=xsd1</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+  <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+  <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+  <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+  <xs:element name="byte" nillable="true" type="xs:byte"/>
+  <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+  <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+  <xs:element name="double" nillable="true" type="xs:double"/>
+  <xs:element name="float" nillable="true" type="xs:float"/>
+  <xs:element name="int" nillable="true" type="xs:int"/>
+  <xs:element name="long" nillable="true" type="xs:long"/>
+  <xs:element name="QName" nillable="true" type="xs:QName"/>
+  <xs:element name="short" nillable="true" type="xs:short"/>
+  <xs:element name="string" nillable="true" type="xs:string"/>
+  <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+  <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+  <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+  <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+  <xs:element name="char" nillable="true" type="tns:char"/>
+  <xs:simpleType name="char">
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+  <xs:element name="duration" nillable="true" type="tns:duration"/>
+  <xs:simpleType name="duration">
+    <xs:restriction base="xs:duration">
+      <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+      <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+      <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="guid" nillable="true" type="tns:guid"/>
+  <xs:simpleType name="guid">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attribute name="FactoryType" type="xs:QName"/>
+  <xs:attribute name="Id" type="xs:ID"/>
+  <xs:attribute name="Ref" type="xs:IDREF"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Tasks?xsd=xsd3</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/System" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/System" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:import schemaLocation="http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Tasks?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+  <xs:complexType name="ArgumentException">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SystemException"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ArgumentException" nillable="true" type="tns:ArgumentException"/>
+  <xs:complexType name="SystemException">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Exception"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SystemException" nillable="true" type="tns:SystemException"/>
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:any minOccurs="0" maxOccurs="unbounded" namespace="##local" processContents="skip"/>
+    </xs:sequence>
+    <xs:attribute ref="ser:FactoryType"/>
+  </xs:complexType>
+  <xs:element name="Exception" nillable="true" type="tns:Exception"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8731/Jarvis.Services/Tasks</con:endpoint><con:endpoint>http://localhost:8731/Jarvis.Services/Tasks/V1</con:endpoint><con:endpoint>http://localhost:8731/Jarvis.Daemon.Services/Tasks/V1</con:endpoint><con:endpoint>http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Tasks/V1</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://edwin.sf.net/services/jarvis/ITaskServiceV1/EnableTask" name="EnableTask" bindingOperationName="EnableTask" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Basic Request"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Tasks/V1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:jarvis="http://edwin.sf.net/services/jarvis">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <jarvis:EnableTask>
+         <jarvis:name>?</jarvis:name>
+      </jarvis:EnableTask>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ITaskServiceV1/EnableTask"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="http://edwin.sf.net/services/jarvis/ITaskServiceV1/DisableTask" name="DisableTask" bindingOperationName="DisableTask" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Basic Request"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Tasks/V1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:jarvis="http://edwin.sf.net/services/jarvis">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <jarvis:DisableTask>
+         <jarvis:name>?</jarvis:name>
+      </jarvis:DisableTask>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ITaskServiceV1/DisableTask"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="http://edwin.sf.net/services/jarvis/ITaskServiceV1/GetTaskData" name="GetTaskData" bindingOperationName="GetTaskData" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Basic Request"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Tasks/V1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:jarvis="http://edwin.sf.net/services/jarvis">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <jarvis:GetTaskData>
+         <jarvis:name>?</jarvis:name>
+      </jarvis:GetTaskData>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ITaskServiceV1/GetTaskData"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="http://edwin.sf.net/services/jarvis/ITaskServiceV1/GetTaskNames" name="GetTaskNames" bindingOperationName="GetTaskNames" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Basic Request"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Tasks/V1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:jarvis="http://edwin.sf.net/services/jarvis">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <jarvis:GetTaskNames/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ITaskServiceV1/GetTaskNames"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="BasicHttpBinding_IDiagnosticServiceV1" type="wsdl" bindingName="{http://tempuri.org/}BasicHttpBinding_IDiagnosticServiceV1" soapVersion="1_1" anonymous="optional" definition="http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Diagnostics?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Diagnostics?wsdl"><con:part><con:url>http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Diagnostics?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="DiagnosticService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://edwin.sf.net/services/jarvis" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+  <wsdl:import namespace="http://edwin.sf.net/services/jarvis" location="http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Diagnostics?wsdl=wsdl0"/>
+  <wsdl:types/>
+  <wsdl:binding name="BasicHttpBinding_IDiagnosticServiceV1" type="i0:IDiagnosticServiceV1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="IsAlive">
+      <soap:operation soapAction="http://edwin.sf.net/services/jarvis/IDiagnosticServiceV1/IsAlive" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerTime">
+      <soap:operation soapAction="http://edwin.sf.net/services/jarvis/IDiagnosticServiceV1/GetServerTime" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVersionData">
+      <soap:operation soapAction="http://edwin.sf.net/services/jarvis/IDiagnosticServiceV1/GetVersionData" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DiagnosticService">
+    <wsdl:port name="BasicHttpBinding_IDiagnosticServiceV1" binding="tns:BasicHttpBinding_IDiagnosticServiceV1">
+      <soap:address location="http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Diagnostics/V1"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Diagnostics?wsdl=wsdl0</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://edwin.sf.net/services/jarvis" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://edwin.sf.net/services/jarvis" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://edwin.sf.net/services/jarvis/Imports">
+      <xsd:import schemaLocation="http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Diagnostics?xsd=xsd0" namespace="http://edwin.sf.net/services/jarvis"/>
+      <xsd:import schemaLocation="http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Diagnostics?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDiagnosticServiceV1_IsAlive_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsAlive"/>
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticServiceV1_IsAlive_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsAliveResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticServiceV1_GetServerTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServerTime"/>
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticServiceV1_GetServerTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServerTimeResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticServiceV1_GetVersionData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVersionData"/>
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticServiceV1_GetVersionData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVersionDataResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="IDiagnosticServiceV1">
+    <wsdl:operation name="IsAlive">
+      <wsdl:input wsaw:Action="http://edwin.sf.net/services/jarvis/IDiagnosticServiceV1/IsAlive" message="tns:IDiagnosticServiceV1_IsAlive_InputMessage"/>
+      <wsdl:output wsaw:Action="http://edwin.sf.net/services/jarvis/IDiagnosticServiceV1/IsAliveResponse" message="tns:IDiagnosticServiceV1_IsAlive_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerTime">
+      <wsdl:input wsaw:Action="http://edwin.sf.net/services/jarvis/IDiagnosticServiceV1/GetServerTime" message="tns:IDiagnosticServiceV1_GetServerTime_InputMessage"/>
+      <wsdl:output wsaw:Action="http://edwin.sf.net/services/jarvis/IDiagnosticServiceV1/GetServerTimeResponse" message="tns:IDiagnosticServiceV1_GetServerTime_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetVersionData">
+      <wsdl:input wsaw:Action="http://edwin.sf.net/services/jarvis/IDiagnosticServiceV1/GetVersionData" message="tns:IDiagnosticServiceV1_GetVersionData_InputMessage"/>
+      <wsdl:output wsaw:Action="http://edwin.sf.net/services/jarvis/IDiagnosticServiceV1/GetVersionDataResponse" message="tns:IDiagnosticServiceV1_GetVersionData_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Diagnostics?xsd=xsd0</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://edwin.sf.net/services/jarvis" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://edwin.sf.net/services/jarvis">
+  <xs:element name="IsAlive">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsAliveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsAliveResult" type="xs:boolean"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServerTime">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServerTimeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetServerTimeResult" type="xs:dateTime"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVersionData">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVersionDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetVersionDataResult" nillable="true" type="tns:VersionDataV1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="VersionDataV1">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Application" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OperatingSystem" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Runtime" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VersionDataV1" nillable="true" type="tns:VersionDataV1"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Diagnostics?xsd=xsd1</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+  <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+  <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+  <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+  <xs:element name="byte" nillable="true" type="xs:byte"/>
+  <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+  <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+  <xs:element name="double" nillable="true" type="xs:double"/>
+  <xs:element name="float" nillable="true" type="xs:float"/>
+  <xs:element name="int" nillable="true" type="xs:int"/>
+  <xs:element name="long" nillable="true" type="xs:long"/>
+  <xs:element name="QName" nillable="true" type="xs:QName"/>
+  <xs:element name="short" nillable="true" type="xs:short"/>
+  <xs:element name="string" nillable="true" type="xs:string"/>
+  <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+  <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+  <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+  <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+  <xs:element name="char" nillable="true" type="tns:char"/>
+  <xs:simpleType name="char">
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+  <xs:element name="duration" nillable="true" type="tns:duration"/>
+  <xs:simpleType name="duration">
+    <xs:restriction base="xs:duration">
+      <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+      <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+      <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="guid" nillable="true" type="tns:guid"/>
+  <xs:simpleType name="guid">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attribute name="FactoryType" type="xs:QName"/>
+  <xs:attribute name="Id" type="xs:ID"/>
+  <xs:attribute name="Ref" type="xs:IDREF"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8731/Jarvis.Services/Diagnostics</con:endpoint><con:endpoint>http://localhost:8731/Jarvis.Services/Diagnostics/V1</con:endpoint><con:endpoint>http://localhost:8731/Jarvis.Daemon.Services/Diagnostics/V1</con:endpoint><con:endpoint>http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Diagnostics/V1</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://edwin.sf.net/services/jarvis/IDiagnosticServiceV1/GetServerTime" name="GetServerTime" bindingOperationName="GetServerTime" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Basic Request"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Diagnostics/V1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:jarvis="http://edwin.sf.net/services/jarvis">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <jarvis:GetServerTime/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IDiagnosticServiceV1/GetServerTime"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="http://edwin.sf.net/services/jarvis/IDiagnosticServiceV1/IsAlive" name="IsAlive" bindingOperationName="IsAlive" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Basic Request"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Diagnostics/V1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:jarvis="http://edwin.sf.net/services/jarvis">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <jarvis:IsAlive/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IDiagnosticServiceV1/IsAlive"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="http://edwin.sf.net/services/jarvis/IDiagnosticServiceV1/GetVersionData" name="GetVersionData" bindingOperationName="GetVersionData" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Basic Request"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Diagnostics/V1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:jarvis="http://edwin.sf.net/services/jarvis">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <jarvis:GetVersionData/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IDiagnosticServiceV1/GetVersionData"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="BasicHttpBinding_ITriggerServiceV1" type="wsdl" bindingName="{http://tempuri.org/}BasicHttpBinding_ITriggerServiceV1" soapVersion="1_1" anonymous="optional" definition="http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Triggers?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Triggers?wsdl"><con:part><con:url>http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Triggers?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="TriggerService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://edwin.sf.net/services/jarvis" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+  <wsdl:import namespace="http://edwin.sf.net/services/jarvis" location="http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Triggers?wsdl=wsdl0"/>
+  <wsdl:types/>
+  <wsdl:binding name="BasicHttpBinding_ITriggerServiceV1" type="i0:ITriggerServiceV1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetTriggerNames">
+      <soap:operation soapAction="http://edwin.sf.net/services/jarvis/ITriggerServiceV1/GetTriggerNames" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTriggerData">
+      <soap:operation soapAction="http://edwin.sf.net/services/jarvis/ITriggerServiceV1/GetTriggerData" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ArgumentExceptionFault">
+        <soap:fault name="ArgumentExceptionFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TriggerService">
+    <wsdl:port name="BasicHttpBinding_ITriggerServiceV1" binding="tns:BasicHttpBinding_ITriggerServiceV1">
+      <soap:address location="http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Triggers/V1"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Triggers?wsdl=wsdl0</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://edwin.sf.net/services/jarvis" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://edwin.sf.net/services/jarvis" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://edwin.sf.net/services/jarvis/Imports">
+      <xsd:import schemaLocation="http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Triggers?xsd=xsd0" namespace="http://edwin.sf.net/services/jarvis"/>
+      <xsd:import schemaLocation="http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Triggers?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      <xsd:import schemaLocation="http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Triggers?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+      <xsd:import schemaLocation="http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Triggers?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITriggerServiceV1_GetTriggerNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTriggerNames"/>
+  </wsdl:message>
+  <wsdl:message name="ITriggerServiceV1_GetTriggerNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTriggerNamesResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ITriggerServiceV1_GetTriggerData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTriggerData"/>
+  </wsdl:message>
+  <wsdl:message name="ITriggerServiceV1_GetTriggerData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTriggerDataResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ITriggerServiceV1_GetTriggerData_ArgumentExceptionFault_FaultMessage">
+    <wsdl:part name="detail" element="q1:ArgumentException" xmlns:q1="http://schemas.datacontract.org/2004/07/System"/>
+  </wsdl:message>
+  <wsdl:portType name="ITriggerServiceV1">
+    <wsdl:operation name="GetTriggerNames">
+      <wsdl:input wsaw:Action="http://edwin.sf.net/services/jarvis/ITriggerServiceV1/GetTriggerNames" message="tns:ITriggerServiceV1_GetTriggerNames_InputMessage"/>
+      <wsdl:output wsaw:Action="http://edwin.sf.net/services/jarvis/ITriggerServiceV1/GetTriggerNamesResponse" message="tns:ITriggerServiceV1_GetTriggerNames_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetTriggerData">
+      <wsdl:input wsaw:Action="http://edwin.sf.net/services/jarvis/ITriggerServiceV1/GetTriggerData" message="tns:ITriggerServiceV1_GetTriggerData_InputMessage"/>
+      <wsdl:output wsaw:Action="http://edwin.sf.net/services/jarvis/ITriggerServiceV1/GetTriggerDataResponse" message="tns:ITriggerServiceV1_GetTriggerData_OutputMessage"/>
+      <wsdl:fault wsaw:Action="http://edwin.sf.net/services/jarvis/ITriggerServiceV1/GetTriggerDataArgumentExceptionFault" name="ArgumentExceptionFault" message="tns:ITriggerServiceV1_GetTriggerData_ArgumentExceptionFault_FaultMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Triggers?xsd=xsd0</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://edwin.sf.net/services/jarvis" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://edwin.sf.net/services/jarvis">
+  <xs:import schemaLocation="http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Triggers?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+  <xs:element name="GetTriggerNames">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTriggerNamesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTriggerNamesResult" nillable="true" type="q1:ArrayOfstring" xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTriggerData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTriggerDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTriggerDataResult" nillable="true" type="tns:TriggerDataV1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="TriggerDataV1">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LastTime" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TriggerDataV1" nillable="true" type="tns:TriggerDataV1"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Triggers?xsd=xsd2</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+  <xs:complexType name="ArrayOfstring">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfstring" nillable="true" type="tns:ArrayOfstring"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Triggers?xsd=xsd1</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+  <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+  <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+  <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+  <xs:element name="byte" nillable="true" type="xs:byte"/>
+  <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+  <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+  <xs:element name="double" nillable="true" type="xs:double"/>
+  <xs:element name="float" nillable="true" type="xs:float"/>
+  <xs:element name="int" nillable="true" type="xs:int"/>
+  <xs:element name="long" nillable="true" type="xs:long"/>
+  <xs:element name="QName" nillable="true" type="xs:QName"/>
+  <xs:element name="short" nillable="true" type="xs:short"/>
+  <xs:element name="string" nillable="true" type="xs:string"/>
+  <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+  <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+  <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+  <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+  <xs:element name="char" nillable="true" type="tns:char"/>
+  <xs:simpleType name="char">
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+  <xs:element name="duration" nillable="true" type="tns:duration"/>
+  <xs:simpleType name="duration">
+    <xs:restriction base="xs:duration">
+      <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+      <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+      <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="guid" nillable="true" type="tns:guid"/>
+  <xs:simpleType name="guid">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attribute name="FactoryType" type="xs:QName"/>
+  <xs:attribute name="Id" type="xs:ID"/>
+  <xs:attribute name="Ref" type="xs:IDREF"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Triggers?xsd=xsd3</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/System" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/System" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:import schemaLocation="http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Triggers?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+  <xs:complexType name="ArgumentException">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SystemException"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ArgumentException" nillable="true" type="tns:ArgumentException"/>
+  <xs:complexType name="SystemException">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Exception"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SystemException" nillable="true" type="tns:SystemException"/>
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:any minOccurs="0" maxOccurs="unbounded" namespace="##local" processContents="skip"/>
+    </xs:sequence>
+    <xs:attribute ref="ser:FactoryType"/>
+  </xs:complexType>
+  <xs:element name="Exception" nillable="true" type="tns:Exception"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8731/Jarvis.Daemon.Services/Triggers/V1</con:endpoint><con:endpoint>http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Triggers/V1</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://edwin.sf.net/services/jarvis/ITriggerServiceV1/GetTriggerData" name="GetTriggerData" bindingOperationName="GetTriggerData" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Basic Request"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Triggers/V1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:jarvis="http://edwin.sf.net/services/jarvis">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <jarvis:GetTriggerData>
+         <jarvis:name>?</jarvis:name>
+      </jarvis:GetTriggerData>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ITriggerServiceV1/GetTriggerData"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="http://edwin.sf.net/services/jarvis/ITriggerServiceV1/GetTriggerNames" name="GetTriggerNames" bindingOperationName="GetTriggerNames" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Basic Request"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Triggers/V1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:jarvis="http://edwin.sf.net/services/jarvis">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <jarvis:GetTriggerNames/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ITriggerServiceV1/GetTriggerNames"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="BasicHttpBinding_IActionServiceV1" type="wsdl" bindingName="{http://tempuri.org/}BasicHttpBinding_IActionServiceV1" soapVersion="1_1" anonymous="optional" definition="http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Actions?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Actions?wsdl"><con:part><con:url>http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Actions?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="ActionService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://edwin.sf.net/services/jarvis" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+  <wsdl:import namespace="http://edwin.sf.net/services/jarvis" location="http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Actions?wsdl=wsdl0"/>
+  <wsdl:types/>
+  <wsdl:binding name="BasicHttpBinding_IActionServiceV1" type="i0:IActionServiceV1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetActionNames">
+      <soap:operation soapAction="http://edwin.sf.net/services/jarvis/IActionServiceV1/GetActionNames" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InvokeAction">
+      <soap:operation soapAction="http://edwin.sf.net/services/jarvis/IActionServiceV1/InvokeAction" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ArgumentExceptionFault">
+        <soap:fault name="ArgumentExceptionFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ActionService">
+    <wsdl:port name="BasicHttpBinding_IActionServiceV1" binding="tns:BasicHttpBinding_IActionServiceV1">
+      <soap:address location="http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Actions/V1"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Actions?wsdl=wsdl0</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://edwin.sf.net/services/jarvis" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://edwin.sf.net/services/jarvis" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://edwin.sf.net/services/jarvis/Imports">
+      <xsd:import schemaLocation="http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Actions?xsd=xsd0" namespace="http://edwin.sf.net/services/jarvis"/>
+      <xsd:import schemaLocation="http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Actions?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      <xsd:import schemaLocation="http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Actions?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+      <xsd:import schemaLocation="http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Actions?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IActionServiceV1_GetActionNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActionNames"/>
+  </wsdl:message>
+  <wsdl:message name="IActionServiceV1_GetActionNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActionNamesResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IActionServiceV1_InvokeAction_InputMessage">
+    <wsdl:part name="parameters" element="tns:InvokeAction"/>
+  </wsdl:message>
+  <wsdl:message name="IActionServiceV1_InvokeAction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InvokeActionResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IActionServiceV1_InvokeAction_ArgumentExceptionFault_FaultMessage">
+    <wsdl:part name="detail" element="q1:ArgumentException" xmlns:q1="http://schemas.datacontract.org/2004/07/System"/>
+  </wsdl:message>
+  <wsdl:portType name="IActionServiceV1">
+    <wsdl:operation name="GetActionNames">
+      <wsdl:input wsaw:Action="http://edwin.sf.net/services/jarvis/IActionServiceV1/GetActionNames" message="tns:IActionServiceV1_GetActionNames_InputMessage"/>
+      <wsdl:output wsaw:Action="http://edwin.sf.net/services/jarvis/IActionServiceV1/GetActionNamesResponse" message="tns:IActionServiceV1_GetActionNames_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="InvokeAction">
+      <wsdl:input wsaw:Action="http://edwin.sf.net/services/jarvis/IActionServiceV1/InvokeAction" message="tns:IActionServiceV1_InvokeAction_InputMessage"/>
+      <wsdl:output wsaw:Action="http://edwin.sf.net/services/jarvis/IActionServiceV1/InvokeActionResponse" message="tns:IActionServiceV1_InvokeAction_OutputMessage"/>
+      <wsdl:fault wsaw:Action="http://edwin.sf.net/services/jarvis/IActionServiceV1/InvokeActionArgumentExceptionFault" name="ArgumentExceptionFault" message="tns:IActionServiceV1_InvokeAction_ArgumentExceptionFault_FaultMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Actions?xsd=xsd0</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://edwin.sf.net/services/jarvis" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://edwin.sf.net/services/jarvis">
+  <xs:import schemaLocation="http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Actions?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+  <xs:element name="GetActionNames">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActionNamesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetActionNamesResult" nillable="true" type="q1:ArrayOfstring" xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InvokeAction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InvokeActionResponse">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Actions?xsd=xsd2</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+  <xs:complexType name="ArrayOfstring">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfstring" nillable="true" type="tns:ArrayOfstring"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Actions?xsd=xsd1</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+  <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+  <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+  <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+  <xs:element name="byte" nillable="true" type="xs:byte"/>
+  <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+  <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+  <xs:element name="double" nillable="true" type="xs:double"/>
+  <xs:element name="float" nillable="true" type="xs:float"/>
+  <xs:element name="int" nillable="true" type="xs:int"/>
+  <xs:element name="long" nillable="true" type="xs:long"/>
+  <xs:element name="QName" nillable="true" type="xs:QName"/>
+  <xs:element name="short" nillable="true" type="xs:short"/>
+  <xs:element name="string" nillable="true" type="xs:string"/>
+  <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+  <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+  <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+  <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+  <xs:element name="char" nillable="true" type="tns:char"/>
+  <xs:simpleType name="char">
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+  <xs:element name="duration" nillable="true" type="tns:duration"/>
+  <xs:simpleType name="duration">
+    <xs:restriction base="xs:duration">
+      <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+      <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+      <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="guid" nillable="true" type="tns:guid"/>
+  <xs:simpleType name="guid">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attribute name="FactoryType" type="xs:QName"/>
+  <xs:attribute name="Id" type="xs:ID"/>
+  <xs:attribute name="Ref" type="xs:IDREF"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Actions?xsd=xsd3</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/System" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/System" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:import schemaLocation="http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Actions?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+  <xs:complexType name="ArgumentException">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SystemException"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ArgumentException" nillable="true" type="tns:ArgumentException"/>
+  <xs:complexType name="SystemException">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Exception"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SystemException" nillable="true" type="tns:SystemException"/>
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:any minOccurs="0" maxOccurs="unbounded" namespace="##local" processContents="skip"/>
+    </xs:sequence>
+    <xs:attribute ref="ser:FactoryType"/>
+  </xs:complexType>
+  <xs:element name="Exception" nillable="true" type="tns:Exception"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8731/Jarvis.Daemon.Services/Actions/V1</con:endpoint><con:endpoint>http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Actions/V1</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://edwin.sf.net/services/jarvis/IActionServiceV1/GetActionNames" name="GetActionNames" bindingOperationName="GetActionNames" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Basic Request"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Actions/V1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:jarvis="http://edwin.sf.net/services/jarvis">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <jarvis:GetActionNames/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IActionServiceV1/GetActionNames"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="http://edwin.sf.net/services/jarvis/IActionServiceV1/InvokeAction" name="InvokeAction" bindingOperationName="InvokeAction" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Basic Request"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8731/Design_Time_Addresses/Jarvis.Server.Services/Actions/V1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:jarvis="http://edwin.sf.net/services/jarvis">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <jarvis:InvokeAction>
+         <jarvis:name>house-lights-off</jarvis:name>
+      </jarvis:InvokeAction>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IActionServiceV1/InvokeAction"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite name="Diagnostics Test Suite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Simple Ping Test" searchProperties="true" id="167cf151-47d2-4611-857f-80cb5b98ce82"><con:settings/><con:testStep type="request" name="IsAlive - Basic Test"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BasicHttpBinding_IDiagnosticServiceV1</con:interface><con:operation>IsAlive</con:operation><con:request name="IsAlive - Basic Test" outgoingWss="" incomingWss="" timeout="" wssPasswordType=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8731/Jarvis.Services/Diagnostics</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:jarvis="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <jarvis:IsAlive/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="Schema Compliance" name="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" name="Not SOAP Fault"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IDiagnosticServiceV1/IsAlive"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:loadTest name="Simple Load Test"><con:settings><con:setting id="HttpSettings@close-connections">false</con:setting></con:settings><con:threadCount>5</con:threadCount><con:startDelay>0</con:startDelay><con:sampleInterval>250</con:sampleInterval><con:calculateTPSOnTimePassed>true</con:calculateTPSOnTimePassed><con:resetStatisticsOnThreadCountChange>true</con:resetStatisticsOnThreadCountChange><con:historyLimit>-1</con:historyLimit><con:testLimit>60</con:testLimit><con:limitType>TIME</con:limitType><con:loadStrategy><con:type>Simple</con:type><con:config><testDelay>1000</testDelay><randomFactor>0.5</randomFactor></con:config></con:loadStrategy><con:assertion type="Step Status" name="Step Status"/><con:maxAssertionErrors>100</con:maxAssertionErrors><con:cancelExcessiveThreads>true</con:cancelExcessiveThreads><con:strategyInterval>500</con:strategyInterval></con:loadTest><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Version Test" searchProperties="true" id="593f4b7d-202e-4951-ba1c-31c0f248f509"><con:settings/><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="System Time Test" searchProperties="true"><con:settings/><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite name="Task Service Test Suite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Task Names Test" searchProperties="true" id="1a9d00b0-5b7b-4c84-91b5-0bcb89d17cad"><con:settings/><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Task Enable / Disable" searchProperties="true"><con:settings/><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Task Data Verification" searchProperties="true"><con:settings/><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/></con:soapui-project>
